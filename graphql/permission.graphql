@@ -1,13 +1,15 @@
 type Permission {
-    id: ID
-    name: String
+    id: ID!
+    name: String!
     guard_name: String
+    roles: [Role] @belongsToMany
 }
 
 type Role {
-    id: ID
-    name: String
+    id: ID!
+    name: String!
     guard_name: String
+    permissions: [Permission] @belongsToMany
 }
 
 input GivePermissionToUserInput {
