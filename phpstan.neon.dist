@@ -10,4 +10,19 @@ parameters:
     checkOctaneCompatibility: true
     checkModelProperties: true
     checkMissingIterableValueType: false
+    ignoreErrors:
+        -
+            message: '#Call to an undefined method [a-zA-Z0-9\\_]+::hasRole\(\)#'
+            path: src/GraphQL/Directives/RestrictDirective.php
+        -
+            message: '#Call to an undefined method [a-zA-Z0-9\\_]+::givePermissionTo\(\)#'
+            path: src/GraphQL/Mutations/GivePermissionToRole.php
+        -
+            message: '#Call to an undefined method [a-zA-Z0-9\\_]+::revokePermissionTo\(\)#'
+            path: src/GraphQL/Mutations/RevokePermissionToRole.php
+        -
+            message: '#Call to static method [a-zA-Z0-9\\_]+\(\) on an unknown class [a-zA-Z0-9\\_]+#'
+            paths:
+                - src/GraphQL/Mutations/RevokePermissionToUser.php
+                - src/GraphQL/Mutations/GivePermissionToUser.php
 
