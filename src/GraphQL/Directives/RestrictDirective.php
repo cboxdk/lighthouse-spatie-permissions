@@ -27,7 +27,6 @@ Restrict access of permission mutations based on role defined in config
 """
 directive @restrict on FIELD_DEFINITION
 SDL;
-
     }
 
     public function handleField(FieldValue $fieldValue, Closure $next): FieldValue
@@ -65,7 +64,5 @@ SDL;
                 }
             )
         );
-
     }
-
 }

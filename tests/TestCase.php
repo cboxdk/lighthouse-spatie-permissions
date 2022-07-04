@@ -2,9 +2,9 @@
 
 namespace Cbox\LighthouseSpatiePermissions\Tests;
 
+use Cbox\LighthouseSpatiePermissions\LighthouseSpatiePermissionsServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Cbox\LighthouseSpatiePermissions\LighthouseSpatiePermissionsServiceProvider;
 
 class TestCase extends Orchestra
 {

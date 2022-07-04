@@ -2,8 +2,8 @@
 
 namespace Cbox\LighthouseSpatiePermissions\Traits;
 
-trait DifferentPermissions {
-
+trait DifferentPermissions
+{
     public function getAllPermissionsAttribute()
     {
         return $this->getAllPermissions();

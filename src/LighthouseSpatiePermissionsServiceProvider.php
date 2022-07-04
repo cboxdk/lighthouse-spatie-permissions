@@ -18,7 +18,6 @@ class LighthouseSpatiePermissionsServiceProvider extends PackageServiceProvider
          */
         $package->name('lighthouse-spatie-permissions')
             ->hasConfigFile();
-
     }
 
     public function packageBooted()
