@@ -1,24 +1,27 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "cboxdk/lighthouse-spatie-permissions",
+    "description": "Adds types and mutations to lighthouse-php GraphQL for spatie/laravel-permission",
     "keywords": [
-        ":vendor_name",
+        "cboxdk",
         "laravel",
-        ":package_slug"
+        "lighthouse-php",
+        "lighthouse-spatie-permissions"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/cboxdk/lighthouse-spatie-permissions",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Sylvester Nielsen",
+            "email": "sn@cbox.dk",
             "role": "Developer"
         }
     ],
     "require": {
         "php": "^8.1",
+        "illuminate/contracts": "^9.0",
+        "nuwave/lighthouse": "^5.55",
         "spatie/laravel-package-tools": "^1.9.2",
-        "illuminate/contracts": "^9.0"
+        "spatie/laravel-permission": "^5.5"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.8",
@@ -35,13 +38,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Cbox\\LighthouseSpatiePermissions\\": "src",
+            "Cbox\\LighthouseSpatiePermissions\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Cbox\\LighthouseSpatiePermissions\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -51,15 +54,19 @@
         "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Cbox\\LighthouseSpatiePermissions\\LighthouseSpatiePermissionsServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "LighthouseSpatiePermissions": "Cbox\\LighthouseSpatiePermissions\\Facades\\LighthouseSpatiePermissions"
             }
         }
     },
